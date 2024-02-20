@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>esri-Library documentation</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" /> -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- <div class="col">
+        <nav id="navbar">
+          <ul class="nav flex-column">
+            <header>esri-Library documentation</header>
+            <li class="nav-item">
+              <a class="nav-link introduction dd" href="#getStart">Get started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link layout dd" href="#i">Initialize the map for
+                <span style="color: #1e7e34">PMO</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link content dd" href="#z">Zoom To Coordinates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link content dd" href="#rlf">Remove Last Figure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link components dd" href="#xy">Convert XY To Latitude, Longitude</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link reference dd" href="#LD">Get Location Points Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link components dd" href="#stepth">Step Through Graphics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link reference dd" href="#sdr">Slide Show Run</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link content dd" href="#scr">Take ScreenShot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link content dd" href="#ass">Initialize the map for
+                <span style="color: #1e7e34">Assets</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link content dd" href="#laat">Return Geometry from the map</a>
+            </li>
+          </ul>
+        </nav>
+      </div> -->
+
+      <div class="">
+        <main id="main-doc">
+          <div class="head-box">
+            <h1>esri-Library</h1>
+          </div>
+
+          <!-- start -->
+          <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+            <h3 id="getStart">Get started...</h3>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  <h5>1. Install and set up</h5>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse ">
+                <div class="accordion-body">
+                  <h6>for AMD modules, add these script tags in the head of your web page.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy1" onclick="copyC('copy1','code1')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code1">
+                        <pre><span class="sp">&lt;<span class="blue">link</span> <span class="yellow">rel</span>=<span class="green">"stylesheet"</span> <span class="yellow">href</span>=<span class="green">"https://js.arcgis.com/4.28/esri/themes/light/main.css"</span>&gt;</span>
+<span class="sp">&lt;<span class="blue">script</span> <span class="yellow">src</span>=<span class="green">"https://js.arcgis.com/4.28/"</span>>&lt;/<span class="blue">script</span>&gt;</span></pre>
+                      </div>
+                    </div>
+                  </div>
+                  <h6>Then add this script to the end of your HTML page.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy2" onclick="copyC('copy2','code2')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code2">
+                        <pre><span class="sp">&lt;<span class="blue">script</span> <span class="yellow">src</span>=<span class="green">"http://infopmo2030-001-site8.atempurl.com/esriGTLibrary/EsriFunctions.js"</span>>&lt;/<span class="blue">script</span>&gt;</span></pre>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- HTML Assets -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree">
+                  <h5>3. Add HTML for AMS</h5>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <h6>Define these HTML <code>div</code> elements to display the map.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy3" onclick="copyC('copy3','code3')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code3">
+<pre><span class="sp">&lt;<span class="blue">div</span> <span class="yellow">id</span>=<span class="green">"displayMap"</span>></span>
+<span class="sp">&lt;/<span class="blue">div</span>></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- HTML PMO -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo">
+                  <h5>2. Add HTML for PMO</h5>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <h6>Define these HTML <code>div</code> elements to display the map.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy4" onclick="copyC('copy4','code4')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code4">
+<pre><span class="sp">&lt;<span class="blue">div</span> <span class="yellow">id</span>=<span class="green">"displayMap"</span>></span>
+<span class="sp"><span class="tab">&lt;<span class="blue">div</span> <span class="yellow">id</span>=<span class="green">"searchDiv"</span>></span></span>
+<span class="sp"><span class="tab">&lt;/<span class="blue">div</span>></span></span>
+<span class="sp">&lt;/<span class="blue">div</span>></span></pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- CSS Style -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFour">
+                  <h5>4. Add CSS Style</h5>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <h6>Then add this CSS to the <code>css</code> file of your application.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy5" onclick="copyC('copy5','code5')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code5">
+<pre><span class="sp"><span class="yellow">html,</span></span>
+<span class="sp"><span class="yellow">body,</span></span>
+<span class="sp"><span class="yellow">#displayMap {</span></span>
+<span class="sp"><span class="tab"><span class="blue">padding</span>: <span class="green">0</span>;</span></span>
+<span class="sp"><span class="tab"><span class="blue">margin</span>: <span class="green">0</span>;</span></span>
+<span class="sp"><span class="tab"><span class="blue">height</span>: <span class="green">100%</span>;</span></span>
+<span class="sp"><span class="tab"><span class="blue">width</span>: <span class="green">100%</span>;</span></span>
+<span class="sp"><span class="tab"><span class="blue">-webkit-print-color-adjust</span>: <span class="orange">exact !important</span>;</span></span>
+<span class="sp"><span class="tab"><span class="blue">print-color-adjust</span>: <span class="orange">exact !important</span>;</span></span>
+<span class="sp"><span class="yellow">}</span></span>
+<span class="sp"><span class="yellow">.searchStyle {</span></span>
+<span class="sp"><span class="tab"><span class="blue">position</span>: <span class="orange">absolute</span>;</span></span>
+<span class="sp"><span class="tab"><span class="blue">left</span>: <span class="green">3.2rem</span>;</span></span>
+<span class="sp"><span class="tab"><span class="blue">top</span>: <span class="green">9px</span>;</span></span>
+<span class="sp"><span class="yellow">}</span></span>
+<span class="sp"><span class="yellow">.esri-ui-top-left {</span></span>
+<span class="sp"><span class="tab"><span class="blue">align-items</span>: <span class="orange">baseline !important</span>;</span></span>
+<span class="sp"><span class="yellow">}</span></span></pre>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFive">
+                  <h5>5. End Points for AMS</h5>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <h5>Initialize the map.</h5>
+                  <h6>Call the <code>initializeMapAssets()</code> method to display the map.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy6" onclick="copyC('copy6','code6')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code6">
+<pre><span class="sp"><span class="blue">initializeMapAssets</span>()</span>
+<span class="sp"><span class="green">// Use this function to display map with sketching drawing.</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>Call the <code>returnGraphicsGeometryAssets()</code> method to return the geometry from the map.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy7" onclick="copyC('copy7','code7')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code7">
+<pre><span class="sp"><span class="blue">returnGraphicsGeometryAssets</span>()</span>
+<span class="sp"><span class="green">// Use this function to return long & lat coordinates from sketching drawing.</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>Call the <code>initializeMapAMS2()</code> method to display the map with graphics (Object argument).</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy8" onclick="copyC('copy8','code8')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code8">
+<pre><span class="sp"><span class="blue">initializeMapAMS2</span>()</span>
+<span class="sp"><span class="green">// Use this function to display assets on the map with attributes.</span></span>
+
+<span class="sp"><span class="green">// The object will be exact with this...</span></span>
+<span class="sp"><span class="purple">var</span> <span class="blue">AMS_Object</span> = <span class="blue">[ <span class="green">//Required(Array of Objects)</span></span></span>
+<span class="sp"><span class="tab"><span class="purple">{</span></span></span>
+    <span class="sp"><span class="tab"><span class="blue">point</span>: <span class="blue">[</span><span class="green">40.3428694908154</span>, <span class="green">23.124706986539458</span><span class="blue">]</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">locationName</span>: <span class="orange">"Location 1"</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">code</span>: <span class="green">1</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">url</span>: <span class="orange">"/Locations/AllAssetInLocation/6"</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">assetCount</span>: <span class="green">4</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">locationId</span>: <span class="green">1</span>,</span></span>
+<span class="sp"><span class="tab"><span class="purple">}</span>,</span></span>
+<span class="sp"><span class="tab"><span class="purple">{</span></span></span>
+    <span class="sp"><span class="tab"><span class="blue">point</span>: <span class="blue">[</span><span class="green">40.3428694908154</span>, <span class="green">18.124706986539458</span><span class="blue">]</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">locationName</span>: <span class="orange">"Location 2"</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">code</span>: <span class="green">2</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">url</span>: <span class="orange">"/Locations/AllAssetInLocation/2"</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">assetCount</span>: <span class="green">9</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">locationId</span>: <span class="green">2</span>,</span></span>
+<span class="sp"><span class="tab"><span class="purple">}</span>,</span></span>
+<span class="sp"><span class="tab"><span class="purple">{</span></span></span>
+    <span class="sp"><span class="tab"><span class="blue">point</span>: <span class="blue">[</span><span class="green">30.3428694908154</span>, <span class="green">31.124706986539458</span><span class="blue">]</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">locationName</span>: <span class="orange">"Location 3"</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">code</span>: <span class="green">3</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">url</span>: <span class="orange">"/Locations/AllAssetInLocation/3"</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">assetCount</span>: <span class="green">18</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">locationId</span>: <span class="green">3</span>,</span></span>
+<span class="sp"><span class="tab"><span class="purple">}</span>,</span></span>
+<span class="sp"><span class="blue">] </span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseSix">
+                  <h5>6. End Points for PMO</h5>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <h5>Initialize the map.</h5>
+                  <h6>Call the <code>initializeMap()</code> method to display the map.</h6>
+                  <p>Note that this function takes a parameters and it's about:</p>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy9" onclick="copyC('copy9','code9')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code9">
+<pre><span class="sp"><span class="blue">initializeMap</span>(<span class="yellow">arrayOfDisplayedGraphics</span>, <span class="yellow">withSketch</span> = <span class="blue">false</span>, <span class="yellow">HTMLElementsArray</span>=<span class="blue">[]</span>, <span class="yellow">AddModalId</span>=<span class="blue">""</span>, <span class="yellow">HasLabel</span>=<span class="blue">false</span>, <span class="yellow">HasKML</span>=<span class="blue">false</span>)</span>
+
+<span class="sp"><span class="green">// arrayOfDisplayedGraphics:  The array of the locations to display on the map (Array of objects)</span>,</span>
+<span class="sp"><span class="green">// withSketch : Whether to have sketch widget or not(Boolean)</span>,</span>
+<span class="sp"><span class="green">// HTMLElementsArray: All the html components to add in the map(Array of HTML elements[HTMLElement,Boolean])</span>,</span>
+<span class="sp"><span class="green">// HTMLElementsArray[(HTMLElement), button will replace the search elemnt or not (Boolean)]</span>,</span>
+<span class="sp"><span class="green">// HTMLElementsArray will send it to the addWidgets function that called inside the initializeMap function</span>,</span>
+<span class="sp"><span class="green">// AddModalId: Uique ID for the html modal to perform the action of add  new location (String)</span>,</span>
+<span class="sp"><span class="green">// HasLabel: Whether to display label for each location or not(Boolean)</span>,</span>
+<span class="sp"><span class="green">// HasKML: Whether the project has kml locations or not  (Boolean)</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>This function takes a specific object of data (arrayOfDisplayedGraphics), the object must be like that:</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy10" onclick="copyC('copy10','code10')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code10">
+<pre><span class="sp"><span class="yellow">[ <span class="green">//Required(Array of Objects)</span></span></span>
+<span class="sp"><span class="tab"><span class="purple">{</span></span></span>
+    <span class="sp"><span class="tab"><span class="orange">"ProjectData"</span>: <span class="purple">{</span> <span class="green">//Required has the data attributes for Locations -->user can add any data</span></span></span>
+    
+    <span class="sp"><span class="tab"><span class="purple">}</span></span></span>
+    <span class="sp"><span class="tab"><span class="orange">"AllLocations"</span>: <span class="purple">{</span> <span class="green">//Required To hold all Locations (Object)</span></span></span>
+        <span class="sp"><span class="tab"><span class="orange">"LocationsData"</span>: <span class="yellow">[</span> <span class="green">//Required To hold all Locations (Object)</span></span></span>
+            <span class="sp"><span class="tab"><span class="purple">{</span></span></span>
+                <span class="sp"><span class="tab"><span class="orange">"Color"</span>: <span class="orange">"Green"</span>, <span class="green">//Required (String)</span></span></span>
+                <span class="sp"><span class="tab"><span class="orange">"GeometryType"</span>: <span class="orange">"polygon"</span>, <span class="green">//Required (String)</span></span></span>
+                <span class="sp"><span class="tab"><span class="orange">"LocationPoints"</span>: <span class="green">//Required (Array of Arrays)</span></span></span></span>
+                <span class="sp"><span class="tab"><span class="blue">[</span></span></span>
+                    <span class="sp"><span class="tab"><span class="yellow">[</span></span></span>
+                        <span class="tab"><span class="blue">5201549.45   //X  Representation</span>,</span>
+                        <span class="tab"><span class="blue">2838632.45    //Y Representation</span></span>
+                    <span class="sp"><span class="tab"><span class="yellow">]</span>,</span></span>
+                    <span class="sp"><span class="tab"><span class="yellow">[</span></span></span>
+                        <span class="tab"><span class="blue">5201554.22</span>,</span>
+                        <span class="tab"><span class="blue">2838625.28</span></span>
+                    <span class="sp"><span class="tab"><span class="yellow">]</span>,</span></span>
+                    <span class="sp"><span class="tab"><span class="yellow">[</span></span></span>
+                        <span class="tab"><span class="blue">5201557.21</span>,</span>
+                        <span class="tab"><span class="blue">2838526.15</span></span>
+                    <span class="sp"><span class="tab"><span class="yellow">]</span>,</span></span>
+                    <span class="sp"><span class="tab"><span class="yellow">[</span></span></span>
+                        <span class="tab"><span class="blue">5201560.79</span>,</span>
+                        <span class="tab"><span class="blue">2838263.4</span></span>
+                    <span class="sp"><span class="tab"><span class="yellow">]</span>,</span></span>
+                    <span class="sp"><span class="tab"><span class="yellow">[]</span>,<span class="yellow">[]</span>,<span class="yellow">[]</span>,</span></span>
+                <span class="sp"><span class="tab"><span class="blue">]</span>,</span></span>
+                <span class="sp"><span class="tab"><span class="orange">"LocationId"</span>: <span class="blue">400</span>, <span class="green">//Required</span></span></span>
+            <span class="sp"><span class="tab"><span class="purple">}</span></span></span>
+            <span class="sp"><span class="tab">,<span class="purple">{}</span>,<span class="purple">{}</span>,<span class="purple">{}</span>,</span></span>
+        <span class="sp"><span class="tab"><span class="yellow">]</span></span></span>
+    <span class="sp"><span class="tab"><span class="purple">}</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="orange">"Center"</span>: <span class="green">//Required to centralize the map (Array)</span></span></span>
+    <span class="sp"><span class="tab"><span class="blue">[</span></span></span>
+        <span class="sp"><span class="tab"><span class="blue">43.34</span>, <span class="green">//Required  latitude</span></span></span>
+        <span class="sp"><span class="tab"><span class="blue">26.2</span>, <span class="green">//Required  longitude</span></span></span>
+        <span class="sp"><span class="tab"><span class="blue">11</span>, <span class="green">//Required  zoom</span></span></span>
+    <span class="sp"><span class="tab"><span class="blue">]</span></span></span>
+    <span class="sp"><span class="tab"><span class="orange">"LabelData"</span>: <span class="blue">208</span> <span class="green">//Optional data for labels  (String)</span></span></span>
+    <span class="sp"><span class="tab"><span class="orange">"KMLArray"</span>: <span class="blue">[</span> <span class="green">//Array of objects holding the KML services of the project **new</span></span></span>
+        <span class="sp"><span class="tab"><span class="yellow">{</span></span></span>
+            <span class="sp"><span class="tab"><span class="blue">url</span>: <span class="orange">""</span>, <span class="green">// url to the service</span></span></span>
+            <span class="sp"><span class="tab"><span class="blue">title</span>: <span class="orange">""</span>, <span class="green">//KML service Title</span></span></span>
+        <span class="sp"><span class="tab"><span class="yellow">}</span></span></span>
+        <span class="sp"><span class="tab">,<span class="yellow">{}</span>,<span class="yellow">{}</span>,<span class="yellow">{}</span>,</span></span>
+    <span class="sp"><span class="tab"><span class="blue">]</span></span></span>
+<span class="sp"><span class="tab"><span class="purple">}</span></span></span>
+<span class="sp"><span class="tab">,<span class="purple">{}</span>,<span class="purple">{}</span>,<span class="purple">{}</span>,</span></span>
+<span class="sp"><span class="yellow">]</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>Call the <code>ZoomTOCoordinates()</code> method to zoom to specific location.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy11" onclick="copyC('copy11','code11')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code11">
+<pre><span class="sp"><span class="blue">ZoomTOCoordinates</span>(<span class="yellow">id</span>)</span>
+<span class="sp"><span class="green">// id:  The id of the location that called (ProjectLocationId of ProjectData in the above object)</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>Call the <code>RemoveLastFigure()</code> method to remove last graphic form layer.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy12" onclick="copyC('copy12','code12')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code12">
+<pre><span class="sp"><span class="blue">RemoveLastFigure</span>()</span>
+<span class="sp"><span class="green">// Use this function to remove last graphics if the user delete the graphics from the map</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>Call the <code>ConvertXY_To_LATLONG()</code> method to convert from PCS to GCS.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy13" onclick="copyC('copy13','code13')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code13">
+<pre><span class="sp"><span class="blue">ConvertXY_To_LATLONG</span>(<span class="yellow">graphic</span>)</span>
+<span class="sp"><span class="green">// graphic:  The graphic that displayed on the map in Projected Coordinate System</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>Call the <code>GetLocationPointsDetails()</code> method.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy14" onclick="copyC('copy14','code14')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code14">
+<pre><span class="sp"><span class="blue">GetLocationPointsDetails</span>()</span>
+<span class="sp"><span class="green"> // This function return the geometry data of the graphic</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>Call the <code>stepThroughGraphics()</code> method to step through graphics on the map.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy15" onclick="copyC('copy15','code15')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code15">
+<pre><span class="sp"><span class="blue">stepThroughGraphics</span>(<span class="yellow">view</span>, <span class="yellow">gra_MainGL</span>, <span class="yellow">index</span>, <span class="yellow">IsActive</span>)</span>
+<span class="sp"><span class="green">// view: The view of the map</span>,</span>
+<span class="sp"><span class="green">// gra_MainGL: The graphics layer that displayed the graphics on the map</span>,</span>
+<span class="sp"><span class="green">// index: The index of the graphic in the graphics layer</span>,</span>
+<span class="sp"><span class="green">// IsActive: A flag to confirm if you need to show the modal to the current graphic or not</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>Call the <code>SlideShowRun()</code> method to call the above function.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy16" onclick="copyC('copy16','code16')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code16">
+<pre><span class="sp"><span class="blue">SlideShowRun</span>(<span class="yellow">index</span>, <span class="yellow">IsActive</span>)</span>
+<span class="sp"><span class="green">// index: The index of the graphic in the graphics layer</span>,</span>
+<span class="sp"><span class="green">// IsActive: A flag to confirm if you need to show the modal to the current graphic or not</span></span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <h6>Call the <code>takeScreenShot()</code> method to take a screenshot of the current view of the map.</h6>
+                  <!-- code snippets -->
+                  <div class="CodeBox mb-2">
+                    <div class="CBox">
+                      <div class="CB_Heading">
+                        <span>Code</span>
+                        <button class="C_box_main" id="copy17" onclick="copyC('copy17','code17')">
+                          <i class="CBox_icn"></i>
+                        </button>
+                      </div>
+                      <!--Add Your Parse HTML code Here-->
+                      <div id="code17">
+<pre><span class="sp"><span class="blue">takeScreenShot</span>()</span></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          
+          <div class="tNtf" id="toastNotif"></div>
+        </main>
+
+
+        <footer class="bg-body-tertiary text-center text-lg-start">
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-body" target="_blank" href="https://gulfterminal.com/">Gulf Terminal</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyC(e, t) {
+      const o = document.getElementById(e)
+      const n = document.getElementById(t)
+      const selection = getSelection()
+      const range = document.createRange()
+
+      selection.removeAllRanges()
+      range.selectNodeContents(n)
+      selection.addRange(range)
+      document.execCommand("copy")
+      selection.removeAllRanges()
+
+      o.classList.add("copied")
+      document.getElementById("toastNotif").innerHTML =
+        "<span>Copied to Clipboard!</span>"
+
+      setTimeout(() => {
+        o.classList.remove("copied")
+      }, 3000)
+    }
+  </script>
+</body>
+
+</html>
